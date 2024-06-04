@@ -1,0 +1,6 @@
+# Build Files
+dist/
+
+# Secret Files
+.env*
+!.env.example
