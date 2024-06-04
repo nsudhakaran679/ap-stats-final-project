@@ -16,7 +16,7 @@ const data = Array.from({ length: files.length }, () => [0, 0, 0, 0, 0] as Compr
 for (const file of files) {
     const index = parseInt(file.split('.')[0]!) - 1;
     const filePng = `${IMAGE_DIR}/${file}`;
-    console.log(index);
+    console.log();
 
     const { size: sizePng } = await stat(filePng);
     data[index]![0] = sizePng;
@@ -44,7 +44,5 @@ for (const file of files) {
     data[index]![2] = sizeAvif;;
 
 }
-
-console.log(data)
 
 writeFile('../benchmark.csv', data.map(row => row.join(',')).join('\n'));
