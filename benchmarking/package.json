@@ -1,0 +1,20 @@
+{
+    "name": "@ap-stats-final-project/benchmarking",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "start": "npm run dev",
+        "dev": "tsc-watch --onSuccess \"npm run serve\"",
+        "build": "npm run clean && tsc",
+        "clean": "rimraf dist",
+        "serve": "node dist/index.js"
+    },
+    "devDependencies": {
+        "@tsconfig/node20": "^20.1.4",
+        "@tsconfig/strictest": "^2.0.5",
+        "@types/node": "^20.12.12",
+        "rimraf": "^5.0.7",
+        "tsc-watch": "^6.2.0",
+        "typescript": "^5.4.5"
+    }
+}
