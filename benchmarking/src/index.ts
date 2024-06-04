@@ -2,7 +2,7 @@ import { hrtime } from 'node:process'
 import { readdir as readDir, stat, writeFile } from 'node:fs/promises';
 import { execute } from './utils/index.js';
 
-const IMAGE_DIR = './images';
+const IMAGE_DIR = '../images';
 const COMPRESSION_QUALITY = 80;
 
 type CompressionStats = [number, number, number, number, number];
@@ -47,4 +47,4 @@ for (const file of files) {
 
 console.log(data)
 
-writeFile('data.csv', data.map(row => row.join(',')).join('\n'));
+writeFile('../benchmark.csv', data.map(row => row.join(',')).join('\n'));
